@@ -41,6 +41,7 @@ const listPosts =computed(()=> props.posts.data)
                     :title="post.title"
                     :description="post.description"
                     :image="post.image"
+                    :showLink="route('post.show',post.id)"
                     :activeAction="props.activeAction"
                 />
             </template>

@@ -24,6 +24,10 @@ const props = defineProps({
         type: Boolean,
         required: false,
         default: false
+    },
+    showLink:{
+        type:String,
+        defualt:''
     }
 });
 
@@ -62,7 +66,7 @@ function removePost() {
                 </p>
 
                 <div class="mt-4 text-center ">
-                    <Link :href="route('admin.news.show',props.id)" class="m-auto rounded-md text-sm px-3 py-2 bg-blue-500 text-white">
+                    <Link  :href="props.showLink"  class="m-auto rounded-md text-sm px-3 py-2 bg-blue-500 text-white">
                     read more
                     </Link>
                 </div>

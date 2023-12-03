@@ -41,6 +41,7 @@ const listNewss =computed(()=> props.newss.data)
                     :description="news.description"
                     :image="news.image"
                     :activeAction="props.activeAction"
+                    :showLink="route('news.show',news.id)"
                 />
             </template>
 
